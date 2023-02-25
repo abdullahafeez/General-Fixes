@@ -16,3 +16,7 @@ sudo docker commit (container-id) (new images name"docker-in-jenkins)
 
 6.Run the newly created image
 docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home/ -v /var/run/docker.sock:/var/run/docker.sock docker-in-jenkins
+
+7. login in to terminal -> chmod 666 to docker.sock file
+docker exec -it -u 0 (continaer ->"competent_elgamal") bash
+chmod 666 /var/run/docker.sock
